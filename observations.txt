@@ -1,0 +1,56 @@
+Task 2.1: XOR Data set - 
+
+Hyperparameters -
+
+Learning Rate = 0.15
+Number of hidden layers = 1
+Number of nodes in each hidden layer = [5]
+Batchsize = 100
+Number of epochs = 100
+
+This works with lesser nodes in hidden layer also (around 3,4) but it gave accuracy < 90% when initialized by some seeds. So, I chose value 5 which gave accuracy > 95% with most seeds and finally tweaked values of batch size and epoch and got accuracy around 97% with most seed values.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Task 2.2: SemiCircle Data set  -
+
+Hyperparameters -
+
+Learning Rate = 0.1
+Number of hidden layers = 1
+Number of nodes in each hidden layer = [2]
+Batchsize = 20
+Number of epochs = 20
+
+The accuracy is less (around 80-85%) when number of nodes in hidden layer is kept 1. So, I kept number of nodes = 2 in hidden layer and tweaked values of batch size and epoch and got accuracy around 95% with most seed values.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Task 2.3: MNIST -
+
+Hyperparameters -
+
+Learning Rate = 0.1
+Number of hidden layers = 1
+Number of nodes in each hidden layer = [40]
+Batchsize = 25
+Number of epochs = 15
+
+This works with lesser nodes in hidden layer also (around 10-15) but it gave accuracy < 90% when initialized by some seeds. So, I chose value 40 which gave accuracy > 90% with most seeds
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Task 2.4: CIFAR -
+
+Hyperparameters -
+
+Learning Rate = 0.2
+Number of hidden layers = 3 (including flatten layer)
+Number of nodes in each hidden layer = First hidden layer is output of convolution of size [4,9,9] , second layer is after flattening this which is of size (4*9*9 = 324) , and the last hidden layer is fully connected layer with 20 nodes.
+
+Batchsize = 20
+Number of epochs = 12
+
+I first chose this structure of 3 hidden layers (including flatten layer) and tried different values for filter parameters (filter rows and columns, stride length) and nodes in the fully connected hidden layer. Then chose these values as a tradeoff between accuracy and the time it takes to train the model.
+
+I chose the random seed value  = 5
+Test Accuracy obtained = 39.8%
+----------------------------------------------------------------------------------------------------------------------------------------
